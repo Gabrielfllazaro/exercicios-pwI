@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="pagina-registro">
+    
+    <header class="aba">
+        <div class="menu">
+            <div class="logo">
+                <img src="../assets/logo.png" alt="">
+            </div>
+            <span>SMARTPHONES</span>
+            <span>TABLETS</span>
+            <span>Computadores</span>
+        </div>
+        <div class="auth">
+            <a href="../indexx.html">Home</a>
+            <a href="login.html"> Login</a>
+        </div>
+    </header>
+
+    <main>
+        <h2>Registrar</h2>
+        <form>
+            <label for="nome">
+                <input type="text" name="nome" placeholder="Seu nome aqui">
+                <div class="obrigatorio">obrigatorio.</div>      
+            </label>
+
+            <label for="email">
+                <input type="email" name="email"placeholder="email@email.com">
+                <div class="obrigatorio">obrigatorio.</div>
+            </label>
+            <label for="senha">
+                <input type="password" name="senha" placeholder="senha">
+                <div class="obrigatorio">obrigatorio.</div>
+            </label>
+
+            <label>país de Nascimento
+                <select name="país">
+                <option>Brasil</option>
+                <option>Alemanha</option>
+                <option>Espanha</option>
+                <option>Inglaterra</option>
+            </select>
+            <div class="obrigatorio">obrigatorio.</div>
+            </label>
+
+            <label for="Genêro">
+                <div class="radio-agroup">
+                  <label> <input type="radio" name="Genêro"> Masculino</label>
+                  <label> <input type="radio" name="Genêro"> Feminino</label>
+                  <label> <input type="radio" name="Genêro">Prefiro não dizer</label>
+                </div>
+
+            <label>Hobbies</label>
+            <div class="checkbox-group">
+                <label> <input type="checkbox" name="Hobbies">Guitarra</label>
+                <label> <input type="checkbox" name="Hobbies">Futebol</label>
+                <label> <input type="checkbox" name="Hobbies">Tênis</label>
+                <label> <input type="checkbox" name="Hobbies">Programação</label>
+            </div>
+
+            <label> Comentários
+                <textarea name="Comentários"></textarea>
+            </label>
+
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="termos"> Aceito os termos e condições.</label>
+            </div>
+            
+            <div class="buttons">
+                <input type="submit" value="Registrar">
+                <input type="button" value="Cancelar">
+            </div>
+        </form>
+    </main>
+</body>
+</html>

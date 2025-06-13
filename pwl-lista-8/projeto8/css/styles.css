@@ -1,0 +1,352 @@
+@import url('../css/reset.css');
+@import url('../css/variables.css');
+
+/* Página Home */
+body.pagina-home {
+  padding: 20px;
+  font-family: var(--fonte-padrao);
+  background: url('../assets/bg-2.png') no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 80px;
+}
+
+/* Header fixo */
+header {
+  background-color: var(--cor-principal);
+  color: var(--cor-texto-claro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 0 65px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  z-index: 1000;
+}
+
+.menu-esquerdo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+nav a {
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.menu-direito a {
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+/* Conteúdo principal */
+.conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* Produtos */
+.produtos {
+  flex: 3;
+}
+
+.produtos-container {
+  background: white;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.produto {
+  width: 45%;
+  text-align: left;
+}
+
+.produto img {
+  width: 100%;
+  height: auto;
+}
+
+.produto h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.produto p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.produto input[type="button"] {
+  background-color: var(--cor-botao);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tutoriais */
+.tutoriais-container {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--cor-borda);
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+  background: white;
+  padding: 15px;
+  border: 1px solid var(--cor-borda);
+}
+
+.tutorial {
+  display: flex;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.tutorial img {
+  width: 100%;
+}
+
+.tutorial p {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+/* Publicidade */
+.publicidade-container {
+  background: white;
+  padding: 20px;
+  border: 1px solid var(--cor-borda);
+}
+
+.publicidade img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .menu-esquerdo,
+  .menu-direito {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-esquerdo nav a,
+  .menu-direito a {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .conteudo {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .produtos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .produto {
+    width: 90%;
+  }
+
+  .sidebar {
+    margin-top: 20px;
+  }
+}
+
+
+/* Página Registro */
+body.pagina-registro {
+  font-family: var(--fonte-padrao);
+  background: url('../assets/bg-2.png') no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 100px;
+  color: var(--cor-texto-escuro);
+  
+  /* Header fixo */
+  .aba{
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 0 65px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  z-index: 1000;
+}
+
+.menu, .auth {
+  display: flex;
+  align-items: center;
+}
+
+
+.menu span {
+  margin-right: 20px;
+  font-size: 14px;
+  color: var(--cor-texto-claro);
+}
+
+.auth a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: var(--cor-texto-claro);
+  font-size: 14px;
+}
+
+/* Conteúdo principal */
+main {
+  background-color: transparent;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+}
+
+main h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
+}
+
+form {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select,
+form textarea {
+  padding: 10px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.obrigatorio {
+  color: red;
+  font-size: 12px;
+}
+
+/* Grupos de inputs */
+.radio-agroup,
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+/* Botões */
+form .buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Botões com input */
+form input[type="submit"],
+form input[type="button"] {
+  background-color: var(--cor-botao);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Botões com <button> */
+form button {
+  background-color: var(--cor-botao);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .menu, .auth {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu span, .auth a {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  main {
+    width: 95%;
+  }
+}
+
+}
