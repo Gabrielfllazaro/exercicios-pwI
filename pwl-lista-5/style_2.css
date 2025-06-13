@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.l2:hover{
+    color: blueviolet;
+}
+
+.l3:visited {
+    color: pink;
+}

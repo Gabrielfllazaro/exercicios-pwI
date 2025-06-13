@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio - Gabriel Felipe/Isaac</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+    <h1>Portfólio Profissional</h1>
+</header>
+
+  <div id="desktop">
+    <div id="taskbar">
+      <span id="start-btn">Iniciar</span>
+      <span id="clock">00:00</span>
+    </div>
+
+    <div class="window" id="sobre">
+      <div class="window-header">
+        <span>Sobre Mim</span>
+        <span class="close-btn">X</span>
+      </div>
+      <div class="window-body">
+        <p><strong>Nome:</strong> Gabriel Felipe</p>
+        <p><strong>Idade:</strong> 16 anos</p>
+        <p>Gosto de praticar, html,css,js,java e tudo mais um pouco.</p>
+      </div>
+    </div>
+
+    <div class="window" id="formacao">
+      <div class="window-header">
+        <span>Formação Acadêmica</span>
+        <span class="close-btn">X</span>
+      </div>
+      <div class="window-body">
+        <p><strong>Cursando:</strong> D.S na Etec Santa Irmã Agostina</p>
+        <p><strong>Cursando:</strong> Ceap - Técnico em Informática </p>
+      </div>
+    </div>
+
+    <div class="window" id="contato">
+      <div class="window-header">
+        <span>Contato</span>
+        <span class="close-btn">X</span>
+      </div>
+      <div class="window-body">
+        <p><strong>Email:</strong> felipelemelazaro@gmail.com</p>
+        <p><strong>Github:</strong> @gabrielfllazaro</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- biblioteca -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/WinJS/4.4.1/js/base.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/WinJS/4.4.1/js/ui.js"></script>
+  <script>
+    // Pra mexer as janelinhas
+    document.querySelectorAll('.window').forEach(windowElement => {
+      const closeButton = windowElement.querySelector('.close-btn');
+      closeButton.addEventListener('click', () => {
+        windowElement.style.display = 'none';
+      });
+
+    
+      const header = windowElement.querySelector('.window-header');
+      header.style.cursor = 'move';
+      header.addEventListener('mousedown', (e) => {
+        const windowRect = windowElement.getBoundingClientRect();
+        const offsetX = e.clientX - windowRect.left;
+        const offsetY = e.clientY - windowRect.top;
+
+        const onMouseMove = (e) => {
+          windowElement.style.left = `${e.clientX - offsetX}px`;
+          windowElement.style.top = `${e.clientY - offsetY}px`;
+        };
+
+        const onMouseUp = () => {
+          document.removeEventListener('mousemove', onMouseMove);
+          document.removeEventListener('mouseup', onMouseUp);
+        };
+
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
+      });
+    });
+  </script>
+</body>
+</html>

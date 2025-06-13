@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    border: 1px solid black;
+}
+
+.coluna{
+    display: inline-block;
+    margin-left: 80px;
+}
